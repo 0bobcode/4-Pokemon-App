@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Info Fetcher</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pokémon Info Fetcher</h1>
+        <input type="text" id="pokemonName" placeholder="Enter Pokémon name" />
+        <button onclick="fetchPokemonInfo()">Get Pokémon Info</button>
+        <hr>
+
+        <div id="pokemonDetails">
+            <div id="pokemondetailitems">
+                <h2>Details</h2>
+                <p id="pokemonNameDisplay">Name: N/A</p>
+                <p id="pokemonTypes">Types: N/A</p>
+                <p id="pokemonAbilities">Abilities: N/A</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

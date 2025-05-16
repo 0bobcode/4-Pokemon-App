@@ -1,0 +1,51 @@
+*{
+    font-family: "Fugaz One", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+}
+
+.container{
+    border: 1px solid ;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: orange;
+}
+
+input{
+    border: none;
+    padding:10px 20px;
+    border-radius: 3px;
+    margin: 10px;
+    font-weight: 900;
+    outline:none ;
+    color:black;
+}
+
+button{
+    border:none;
+    padding:10px;
+    border-radius: 3px;
+    background-color: #FFC312;
+    color: #000000;
+}
+
+hr{
+    color: black;
+    background-color: black;
+}
+
+#pokemonDetails{
+    display:flex;
+    justify-content: center;
+    
+}
+
+#pokemondetailitems{
+    text-align: left;
+    width:50%;
+}
