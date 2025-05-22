@@ -22,7 +22,7 @@ function fetchPokemonInfo() {
             //demonstrate handaling of VARIOUS status codes
             if (response.status===200) {
                 console.log('Pokémon found HTTP status code:', response.status)
-                throw new Error('Pokémon not found!');
+                return response.json()
             }
             else if(response.status===404){
                 console.error("404 not found and you can go now")
@@ -46,11 +46,17 @@ function fetchPokemonInfo() {
             
         })
         .then(data => {
+            //inspect JSON paylod
+            console.log(`Raw JSON data: ${data}`)
+
             
             // Extracting Pokémon information
             const name = data.name.charAt(0).toUpperCase() + data.name.slice(1);
+            console.log('formatted_name: ', name)
             const types = data.types.map(type => type.type.name).join(", ");
+            console.log('types array: ', data.types, 'joined types: ', types)
             const abilities = data.abilities.map(ability => ability.ability.name).join(", ");
+            console.log('abillities array: ', data.abilities, 'joined abbilities: ', abilities)
 
             // Displaying Pokémon info
             pokemonNameDisplay.textContent = `Name: ${name}`;
